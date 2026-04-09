@@ -1,9 +1,9 @@
 #!/bin/bash
 
-AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-04f9b24ffc7783a86" #replace with your SG ID
-ZONE_ID="Z0775499YCLL41QUIF01"
-DOMAIN_NAME="somayya.fun"
+AMI_ID="ami-0220d79f3f480ecf5"
+SG_ID="sg-031bbb5b9d0fc2760" #replace with your SG ID
+ZONE_ID="Z00734042DAU2MMSOHNJY"
+DOMAIN_NAME="somayya.store"
 for instance in $@ # mongodb redis mysql
 do
     INSTANCE_ID=$(aws ec2 run-instances --image-id $AMI_ID --instance-type t3.micro --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$instance}]" --query 'Instances[0].InstanceId' --output text)
