@@ -4,8 +4,8 @@ Description=Shipping Service
 [Service]
 User=roboshop
 // highlight-start
-Environment=CART_ENDPOINT=cart.somayya.store:8080
-Environment=DB_HOST=mysql.somayya.store
+Environment=CART_ENDPOINT=cart.somayya.fun:8080
+Environment=DB_HOST=mysql.somayya.fun
 // highlight-end
 ExecStart=/bin/java -jar /app/shipping.jar
 SyslogIdentifier=shipping
