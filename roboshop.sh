@@ -2,7 +2,7 @@
 
 AMI_ID="ami-0220d79f3f480ecf5"
 SG_ID="sg-031bbb5b9d0fc2760" #replace with your SG ID
-ZONE_ID="Z00734042DAU2MMSOHNJY"
+ZONE_ID="Z09664501DU0VK2FL80FJ"
 DOMAIN_NAME="somayya.fun"
 for instance in $@ # mongodb redis mysql
 do
